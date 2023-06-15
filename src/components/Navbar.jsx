@@ -1,8 +1,8 @@
+import { Sidebar } from 'flowbite-react'
 import React from 'react'
 
 export const Navbar = () => {
     return (
-
         <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 z-50">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" class="flex items-center">
@@ -13,10 +13,9 @@ export const Navbar = () => {
                     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-                    <div className='w-8 h-8 bg-slate-800 rounded-lg'></div>
+                    <div className='w-8 h-8 rounded-lg bg-slate-800'></div>
                 </div>
             </div>
         </nav>
-
     )
 }
