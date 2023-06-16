@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
 import { HelloWorld } from './components/HelloWorld'
 import { Users } from './components/Users'
 import { BasketScoring } from './components/BasketScoring'
@@ -11,6 +11,9 @@ import { Navbar } from './components/Navbar'
 import { Sidebar } from './components/Sidebar'
 import { fw } from './utils/fw'
 import { Link } from 'react-router-dom'
+import { Theming } from './components/Theming'
+import { ThemeProvider } from './components/ThemeContext'
+import { Login } from './components/Login'
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -55,6 +58,10 @@ function App() {
           </div>
         ))}
       </div>
+      {/* <ThemeProvider>
+        <Theming />
+      </ThemeProvider> */}
+      {/* <Login /> */}
     </div>
   )
 }

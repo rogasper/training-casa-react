@@ -3,6 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
+import { BadmintonScoring } from './components/BadmintonScoring.jsx'
+import { BasketScoring } from './components/BasketScoring.jsx'
 import { DetailMovie } from './components/DetailMovie.jsx'
 import { HelloWorld } from './components/HelloWorld.jsx'
 import { NowPlaying } from './components/NowPlaying.jsx'
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
   {
     path: "upcoming/:idmovie",
     element: <DetailMovie />
+  },
+  {
+    path: "basketscoring",
+    element: <BasketScoring />
+  },
+  {
+    path: "badmintonscoring",
+    element: <BadmintonScoring />
   }
 ])
 
