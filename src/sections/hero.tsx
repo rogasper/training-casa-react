@@ -5,12 +5,14 @@ export const Hero = () => {
 	return (
 		<section>
 			<Image
-				src={generateRandomImg()}
+				src={generateRandomImg('resort')}
 				alt="hero-image"
 				width={1440}
 				height={900}
 				style={{
 					width: '100%',
+					height: '100vh',
+					objectFit: 'cover',
 				}}
 			/>
 		</section>

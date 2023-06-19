@@ -14,10 +14,10 @@ export const Places = () => {
 					marginBottom: 12,
 				}}
 			>
-				Norwood Interiors
+				Norwood Resorts
 			</h2>
-			<p>
-				At Norwood Interiors, we&apos;re a US-based interior
+			<p className="mb-20">
+				At Norwood Resorts, we&apos;re a US-based interior
 				design agency that specializes in sustainable
 				commercial design. With a track record of
 				award-winning projects in Europe, North America, and

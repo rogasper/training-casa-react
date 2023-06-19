@@ -10,10 +10,16 @@
 
 .gallery li {
     position: relative;
-    transition: 1s;
+
 }
 
-.gallery li:hover {
+.gallery li img {
+    transition: 1s;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.gallery li:hover img {
     border-radius: 9999px;
     overflow: hidden;
 }

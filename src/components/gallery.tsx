@@ -2,52 +2,26 @@ import { generateRandomImg } from '@/lib/generateRandomImg';
 import Image from 'next/image';
 import Link from 'next/link';
 import s from '../sections/places.module.css';
+import { COUNTRY_LIST } from '../../DATA/COUNTRY_LIST';
 
 export const Gallery = () => {
+	const data = COUNTRY_LIST;
+
 	return (
 		<ul className={s.gallery}>
-			{DUMMY_DATA.map((item, index) => (
+			{data.map((item, index) => (
 				<li key={index}>
-					<Link href={`/country/${item.country}`}>
+					<Link href={`/list?country=${item.slug}`}>
 						<Image
-							src={item.image}
-							alt={item.country}
+							src={item.image_url}
+							alt={item.name}
 							width={420}
 							height={320}
 						/>
-						<p className={s.countryText}>
-							{item.country}
-						</p>
+						<p className={s.countryText}>{item.name}</p>
 					</Link>
 				</li>
 			))}
 		</ul>
 	);
 };
-
-const DUMMY_DATA = [
-	{
-		country: 'Japan',
-		image: generateRandomImg('architecture'),
-	},
-	{
-		country: 'Indonesia',
-		image: generateRandomImg('indonesia'),
-	},
-	{
-		country: 'Germany',
-		image: generateRandomImg('stadium'),
-	},
-	{
-		country: 'America',
-		image: generateRandomImg('architecture'),
-	},
-	{
-		country: 'England',
-		image: generateRandomImg('architecture'),
-	},
-	{
-		country: 'Saudi',
-		image: generateRandomImg('architecture'),
-	},
-];

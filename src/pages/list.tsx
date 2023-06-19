@@ -1,10 +1,10 @@
 import { Gallery } from '@/components/gallery';
+import { ResortList } from '@/sections/resortList';
 
 export default function Page() {
 	return (
 		<main>
-			<h1>LIST COUNTRY</h1>
-			<Gallery />
+			<ResortList />
 		</main>
 	);
 }

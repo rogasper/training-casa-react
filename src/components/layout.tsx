@@ -7,7 +7,7 @@ export const Layout = ({
 }) => {
 	return (
 		<>
-			<div className="p-4 flex justify-between gap-4">
+			<div className="p-4 shadow-xl flex justify-between gap-4 fixed top-0 left-0 w-full z-50 bg-white ">
 				<Link className="text-4xl font-bold" href={'/'}>
 					Norwood
 				</Link>
@@ -16,18 +16,12 @@ export const Layout = ({
 						className="border border-black rounded-ful block py-2 px-6 rounded-full"
 						href="/list"
 					>
-						Country List
-					</Link>
-					<Link
-						className="border border-black rounded-ful block py-2 px-6 rounded-full"
-						href="/schedule-a-consultation"
-					>
-						Schedule a Consultation
+						Resort List
 					</Link>
 				</div>
 			</div>
 			{children}
-			<footer className="py-16 px-8">
+			<footer className="py-16 px-8 shadow-md">
 				<h4>Norwood</h4>
 				<p>
 					Norwood Interiors | Interior Designer | New York,
