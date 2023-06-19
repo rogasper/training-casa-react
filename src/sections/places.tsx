@@ -1,11 +1,13 @@
-import { generateRandomImg } from '@/lib/generateRandomImg';
-import Image from 'next/image';
 import React from 'react';
-import s from './places.module.css';
-import Link from 'next/link';
-import { Gallery } from '@/components/gallery';
 
-export const Places = () => {
+import { Gallery } from '@/sections/gallery';
+import { COUNTRY_LIST } from '../../DATA/COUNTRY_LIST';
+
+export const Places = ({
+	countryList,
+}: {
+	countryList: typeof COUNTRY_LIST;
+}) => {
 	return (
 		<section className="py-20 px-6">
 			<h2
@@ -26,7 +28,8 @@ export const Places = () => {
 				Contact us today to schedule a consultation and see
 				how we can help transform your space.
 			</p>
-			<Gallery />
+			<h3 className="text-2xl font-bold mb-6">Countries</h3>
+			<Gallery data={countryList} />
 		</section>
 	);
 };

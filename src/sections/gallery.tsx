@@ -1,12 +1,10 @@
 import { generateRandomImg } from '@/lib/generateRandomImg';
 import Image from 'next/image';
 import Link from 'next/link';
-import s from '../sections/places.module.css';
+import s from './places.module.css';
 import { COUNTRY_LIST } from '../../DATA/COUNTRY_LIST';
 
-export const Gallery = () => {
-	const data = COUNTRY_LIST;
-
+export const Gallery = ({ data }: { data: typeof COUNTRY_LIST }) => {
 	return (
 		<ul className={s.gallery}>
 			{data.map((item, index) => (

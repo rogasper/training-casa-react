@@ -4,15 +4,16 @@ import { useRouter } from 'next/router';
 import { RESORT_LIST } from '../../../DATA/RESORT_LIST';
 
 export default function Page() {
+	// *****
+	// TODO:
+	// 1. please change how to get the resort data using Server Side Rendering (SSR) according to the url slug from "/api/resort/detail/slug"
 	const data = RESORT_LIST[0];
-
-	const router = useRouter();
-	const countryName = router.query.countryName as string;
+	// *****
 	return (
 		<main>
 			<Image
 				src={data.image_url}
-				alt={countryName}
+				alt={data.resort_name}
 				width={1440}
 				height={900}
 				className="w-full max-h-[70vh] object-cover"

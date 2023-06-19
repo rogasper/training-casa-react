@@ -4,6 +4,14 @@ import { Sidebar } from './sidebar';
 import Image from 'next/image';
 
 export const ResortList = () => {
+	// *****
+	// TODO:
+	// 1. please change how to get the data using client-side fetching from "/api/resort/list"
+	// 2. check if the country parameter and filter the data accordingly
+
+	const data = RESORT_LIST;
+
+	// *****
 	return (
 		<section className="p-8 flex gap-16 justify-between">
 			<div className="flex-1">
@@ -11,7 +19,7 @@ export const ResortList = () => {
 					Resort List
 				</h1>
 				<div className="flex flex-col gap-12 w-fit">
-					{RESORT_LIST.map((resort) => (
+					{data.map((resort) => (
 						<Link
 							key={resort.slug}
 							className="flex gap-32 text-xl shadow-lg items-center justify-between p-8 rounded-sm hover:bg-slate-200 transition-all"

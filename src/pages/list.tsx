@@ -1,4 +1,4 @@
-import { Gallery } from '@/components/gallery';
+import { Gallery } from '@/sections/gallery';
 import { ResortList } from '@/sections/resortList';
 
 export default function Page() {
