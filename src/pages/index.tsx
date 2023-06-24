@@ -3,6 +3,7 @@ import { Hero } from "@/sections/hero";
 import { Places } from "@/sections/places";
 import { COUNTRY_LIST } from "../../DATA/COUNTRY_LIST";
 import Head from "next/head";
+import { getCountriesFromDb } from "@/queries/getCountries";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,14 +25,14 @@ export default function Home({ countryList }: any) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(
-    "https://the-best-resort.vercel.app/api/resort/countries/"
-  );
-  const countryList = await res.json();
+  // const res = await fetch(
+  //   "https://the-best-resort.vercel.app/api/resort/countries/"
+  // );
+  const res = await getCountriesFromDb();
 
   return {
     props: {
-      countryList,
+      countryList: res,
     },
   };
 };
